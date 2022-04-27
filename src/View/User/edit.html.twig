@@ -1,0 +1,7 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>{{ user.firstname }} {{ user.lastname }}, modifiez vos informations</h1>
+    {% include 'User/_form.html.twig' %}
+    <a href="/users/show?id={{ user.id }}"><button>Retour</button></a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Client : {{ user.firstname}} {{ user.lastname }}</h1>
+    <p>Numéro client : {{ user.id }}<br> 
+        Prénom : {{ user.firstname }}<br> 
+        Nom : {{ user.lastname }}<br> 
+        Email : {{ user.email }}<br> 
+        Adresse : {{ user.address }}<br> 
+        Numéro de téléphone : {{ user.phone }}<br>
+    <a href="/users/edit?id={{ user.id }}"><button>Modifier</button></a>
+    <form action="/users/delete" method="POST">
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <button>Supprimer</button>
+    </form>
+    <a href="/users"><button>Retour</button></a>
+{% endblock %}

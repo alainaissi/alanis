@@ -1,0 +1,27 @@
+{% for error in errors %}
+<p>{{error}}</p>
+{% endfor %}
+
+<form method="post"><b>
+	<input type="hidden" value="{{ user.id }}" name="id">
+
+	<label for="firstname">Prénom</label><br>
+	<input type="text" value="{{ user.firstname }}" name="firstname" placeholder="Entrez votre prénom" id="firstname"><br><br>
+
+	<label for="lastname">Nom</label><br>
+	<input type="text" value="{{ user.lastname }}" name="lastname" placeholder="Entrez votre nom" id="lastname"><br><br>
+
+	<label for="email">Email</label><br>
+	<input type="text" value="{{ user.email }}" name="email" placeholder="Entrez votre email" id="email"><br><br>
+
+	<label for="password">Mot de passe</label><br>
+	<input type="password" value="{{ user.password }}" name="password" placeholder="Entrez votre mot de passe" id="password"><br><br>
+
+	<label for="address">Adresse</label><br>
+	<input type="text" value="{{ user.Address }}" name="address" placeholder="Entrez votre adresse" id="address"><br><br>
+
+	<label for="phone">Téléphone</label><br>
+	<input type="text" value="{{ user.phone }}" name="phone" placeholder="Entrez votre numéro de téléphone" id="phone"><br><br>
+</b>
+	<button>Valider</button><br>
+</form>
